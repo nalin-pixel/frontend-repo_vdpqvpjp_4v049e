@@ -10,7 +10,7 @@ export default function Hero({ t, data }) {
         {/* Interactive 3D background (Spline) */}
         <div className="absolute inset-0">
           <Spline
-            scene="https://prod.spline.design/ESO6PnMadasO0hU3/scene.splinecode"
+            scene="https://prod.spline.design/fcD-iW8YZHyBp1qq/scene.splinecode"
             onLoad={() => setLoading(false)}
             style={{ width: '100%', height: '100%' }}
           />
