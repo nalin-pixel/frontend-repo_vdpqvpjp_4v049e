@@ -1,27 +1,22 @@
 import { useState } from 'react';
+import Spline from '@splinetool/react-spline';
 
 export default function Hero({ t, data }) {
   const [loading, setLoading] = useState(true);
 
-  // Revert to the original first hero banner image previously shared
-  const bannerUrl =
-    'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1920&auto=format&fit=crop';
-
   return (
     <section id="top" className="relative">
       <div className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] overflow-hidden">
-        {/* Background banner image */}
+        {/* Interactive 3D background (Spline) */}
         <div className="absolute inset-0">
-          <img
-            src={bannerUrl}
-            alt="Hero banner"
-            className="h-full w-full object-cover"
+          <Spline
+            scene="https://prod.spline.design/ESO6PnMadasO0hU3/scene.splinecode"
             onLoad={() => setLoading(false)}
-            loading="eager"
+            style={{ width: '100%', height: '100%' }}
           />
         </div>
 
-        {/* Lightweight loader overlay until image fully loads */}
+        {/* Lightweight loader overlay until scene fully loads */}
         {loading && (
           <div className="absolute inset-0 grid place-items-center bg-neutral-950/50">
             <div className="flex items-center gap-3 rounded-md border border-neutral-800 bg-neutral-900/80 px-4 py-2">
