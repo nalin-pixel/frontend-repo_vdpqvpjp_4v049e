@@ -109,11 +109,12 @@ export default function Sections({ t }) {
           {workSections.map((ws, idx) => (
             <div key={idx} className="rounded-lg border border-neutral-900 bg-neutral-950/60 p-4">
               <h3 className="text-sm font-semibold text-white">{ws.heading}</h3>
-              <ul className="mt-3 space-y-2 text-neutral-300 text-sm list-disc list-inside">
+              {/* Render without bullet list */}
+              <div className="mt-3 space-y-2 text-neutral-300 text-sm">
                 {(ws.items || []).map((it, i) => (
-                  <li key={i}>{it}</li>
+                  <p key={i}>{it}</p>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
         </div>

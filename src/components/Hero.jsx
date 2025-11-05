@@ -8,7 +8,7 @@ export default function Hero({ t, data }) {
     <section id="top" className="relative">
       <div className="relative h-[60vh] sm:h-[70vh] md:h-[80vh]">
         <Spline
-          scene="https://prod.spline.design/VJLoxp84lCdVfdZu/scene.splinecode"
+          scene="https://prod.spline.design/41MGRk-UDPKO-l6W/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
           onLoad={() => setLoading(false)}
         />
