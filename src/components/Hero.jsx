@@ -1,19 +1,27 @@
 import { useState } from 'react';
-import Spline from '@splinetool/react-spline';
 
 export default function Hero({ t, data }) {
   const [loading, setLoading] = useState(true);
-  const scene = 'https://prod.spline.design/41MGRk-UDPKO-l6W/scene.splinecode';
+
+  // Restored to the original static banner image (full-bleed background)
+  const bannerUrl =
+    'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1920&auto=format&fit=crop';
 
   return (
     <section id="top" className="relative">
       <div className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] overflow-hidden">
-        {/* 3D Spline scene as the visual banner */}
+        {/* Background banner image */}
         <div className="absolute inset-0">
-          <Spline scene={scene} onLoad={() => setLoading(false)} style={{ width: '100%', height: '100%' }} />
+          <img
+            src={bannerUrl}
+            alt="Hero banner"
+            className="h-full w-full object-cover"
+            onLoad={() => setLoading(false)}
+            loading="eager"
+          />
         </div>
 
-        {/* Lightweight loader overlay until Spline fully loads */}
+        {/* Lightweight loader overlay until image fully loads */}
         {loading && (
           <div className="absolute inset-0 grid place-items-center bg-neutral-950/50">
             <div className="flex items-center gap-3 rounded-md border border-neutral-800 bg-neutral-900/80 px-4 py-2">
@@ -23,8 +31,8 @@ export default function Hero({ t, data }) {
           </div>
         )}
 
-        {/* Gradient overlay should not block interactions with the 3D scene */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/30 to-transparent" />
+        {/* Subtle gradient for text legibility (non-blocking) */}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent" />
 
         {/* Foreground Content */}
         <div className="absolute inset-0 flex items-end">
