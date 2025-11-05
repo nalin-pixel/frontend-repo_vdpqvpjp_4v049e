@@ -3,9 +3,9 @@ import { useState } from 'react';
 export default function Hero({ t, data }) {
   const [loading, setLoading] = useState(true);
 
-  // Restored to the original static banner image (full-bleed background)
+  // Revert to the original first hero banner image previously shared
   const bannerUrl =
-    'https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1920&auto=format&fit=crop';
+    'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1920&auto=format&fit=crop';
 
   return (
     <section id="top" className="relative">
