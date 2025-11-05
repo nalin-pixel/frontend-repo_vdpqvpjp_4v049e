@@ -1,27 +1,24 @@
 import { useState } from 'react';
+import Spline from '@splinetool/react-spline';
 
 export default function Hero({ t, data }) {
   const [loading, setLoading] = useState(true);
-  const imgSrc = data.heroImage ||
-    'https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?q=80&w=2070&auto=format&fit=crop';
 
   return (
     <section id="top" className="relative">
-      <div className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] overflow-hidden">
-        {/* Background hero image */}
+      <div className="relative h-[70vh] md:h-[85vh] overflow-hidden">
+        {/* 3D Spline scene as background */}
         <div className="absolute inset-0">
-          {/* eslint-disable-next-line jsx-a11y/alt-text */}
-          <img
-            src={imgSrc}
-            alt={`${data.name} hero background`}
+          <Spline
+            scene="https://prod.spline.design/VJLoxp84lCdVfdZu/scene.splinecode"
             onLoad={() => setLoading(false)}
-            className="h-full w-full object-cover"
+            style={{ width: '100%', height: '100%' }}
           />
         </div>
 
-        {/* Loader overlay until image fully loads */}
+        {/* Loader overlay until 3D scene fully loads */}
         {loading && (
-          <div className="absolute inset-0 grid place-items-center bg-neutral-950/60">
+          <div className="absolute inset-0 grid place-items-center bg-neutral-950/70">
             <div className="flex items-center gap-3 rounded-md border border-neutral-800 bg-neutral-900/80 px-4 py-2">
               <span className="h-4 w-4 animate-spin rounded-full border-2 border-neutral-400 border-t-transparent" />
               <span className="text-xs text-neutral-300">Loading…</span>
