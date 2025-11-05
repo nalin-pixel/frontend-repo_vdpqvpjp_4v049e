@@ -11,6 +11,8 @@ export default function Navbar({ t, lang, onLangChange, name }) {
           <a className="hover:text-white" href="#about">{t('nav.about')}</a>
           <a className="hover:text-white" href="#skills">{t('nav.skills')}</a>
           <a className="hover:text-white" href="#experience">{t('nav.experience')}</a>
+          <a className="hover:text-white" href="#education">{t('nav.education')}</a>
+          <a className="hover:text-white" href="#certifications">{t('nav.certifications')}</a>
           <a className="hover:text-white" href="#work">{t('nav.work')}</a>
           <a className="hover:text-white" href="#contact">{t('nav.contact')}</a>
         </nav>

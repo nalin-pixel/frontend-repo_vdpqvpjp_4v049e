@@ -11,6 +11,8 @@ const DICT = {
       about: 'About',
       skills: 'Skills',
       experience: 'Experience',
+      education: 'Education',
+      certifications: 'Certifications',
       work: 'Client Work',
       contact: 'Contact',
     },
@@ -28,6 +30,32 @@ const DICT = {
     },
     skills: {
       title: 'Skills',
+      categories: [
+        {
+          heading: 'Frontend Technologies',
+          items: ['HTML', 'CSS', 'SCSS', 'JavaScript', 'TypeScript'],
+        },
+        {
+          heading: 'Frameworks & Libraries',
+          items: ['Vue.js (Vue 3 + Vite)', 'React.js', 'Angular', 'jQuery', 'UIkit', 'Bootstrap', 'Material Design Components'],
+        },
+        {
+          heading: 'State & APIs',
+          items: ['REST API integration', 'Vuex/Pinia', 'Third-party services'],
+        },
+        {
+          heading: 'Version Control',
+          items: ['Git', 'GitHub', 'GitLab'],
+        },
+        {
+          heading: 'Other Skills',
+          items: ['Responsive design', 'Cross-browser compatibility', 'Debugging', 'Performance optimization', 'UI/UX principles'],
+        },
+        {
+          heading: 'Tools & Methodologies',
+          items: ['JIRA', 'Trello', 'Agile/Scrum'],
+        },
+      ],
     },
     experience: {
       title: 'Experience',
@@ -36,26 +64,67 @@ const DICT = {
           title: 'Frontend Developer · Intalio',
           period: 'Jun 2022 – Present',
           bullets: [
-            'Built and maintained a Vue 3 + Vite component library (BaseInput, BaseModal, BaseDropdown, etc.).',
-            'Converted Figma/Adobe XD designs to responsive, production-ready components (Vue/Angular/jQuery).',
-            'Integrated REST APIs and optimized data flow and UX across enterprise dashboards.',
+            'Built and maintained a Vue 3 + Vite component library (BaseInput, BaseModal, BaseDropdown, etc.), used across enterprise apps.',
+            'Converted Figma/Adobe XD designs into responsive, production-ready Vue, Angular, and jQuery components.',
+            'Improved usability by resolving client-reported issues and optimizing workflows.',
+            'Integrated REST APIs and optimized data flow between backend and frontend.',
+            'Collaborated closely with designers, backend teams, and stakeholders to align deliverables with business goals.',
           ],
         },
         {
           title: 'Frontend Developer · Bridgyfy',
           period: 'May 2021 – May 2022',
           bullets: [
-            'Translated Sketch designs into pixel-perfect pages (HTML/CSS/JS).',
-            'Built reusable React components and improved usability of pre-built pages.',
+            'Translated design files (Sketch) into pixel-perfect responsive web pages using HTML, CSS, and JavaScript.',
+            'Built reusable React components to streamline the development process.',
+            'Integrated UIkit and Material Design into projects, enhancing visual appeal.',
+            'Delivered high-quality websites for clients, ensuring functionality and user engagement.',
           ],
         },
         {
-          title: 'Frontend Developer · Freelance',
-          period: 'Oct 2021 – May 2022 / Nov 2018 – Apr 2021',
+          title: 'Freelance Frontend Developer · Fiverr',
+          period: 'Oct 2021 – May 2022',
           bullets: [
-            'Delivered 15+ client projects with strong focus on responsiveness and UX.',
-            'Optimized existing websites for performance and engagement.',
+            'Converted Adobe XD and Figma designs into responsive web pages.',
+            'Resolved client-reported issues with pre-built pages, improving usability by 20%.',
+            'Maintained active communication with clients to align deliverables with business goals.',
           ],
+        },
+        {
+          title: 'Freelance Frontend Developer',
+          period: 'Nov 2018 – Apr 2021',
+          bullets: [
+            'Delivered 15+ client projects with a focus on responsive web design and seamless functionality.',
+            'Provided continuous technical support, ensuring client satisfaction and project success.',
+            'Optimized pre-existing websites for better performance and user engagement.',
+          ],
+        },
+      ],
+    },
+    education: {
+      title: 'Education',
+      entries: [
+        {
+          qualification: 'Technician Specialist in IT Support & Networks (incomplete)',
+          institution: 'OFPPT – Office of Professional Training and Work Promotion',
+          period: 'Sep 2018 – Jul 2020',
+          notes: '2 years of study, coursework completed, diploma not obtained',
+        },
+      ],
+    },
+    certifications: {
+      title: 'Certifications',
+      download: 'Download',
+      entries: [
+        {
+          name: 'Front-End Web Development Certificate – ALX',
+          date: 'Oct 2024',
+          image: '/assets/certificates/alx_frontend_certificate.jpg',
+          file: '/assets/certificates/alx_frontend_certificate.jpg',
+        },
+        {
+          name: 'Professional Foundations Certificate – ALX',
+          date: 'Aug 2024',
         },
       ],
     },
@@ -73,13 +142,13 @@ const DICT = {
         {
           heading: 'Performance',
           items: [
-            'code-splitting, lazy routes, image optimization, hydration costs, bundle budgets.',
+            'Code-splitting, lazy routes, image optimization, hydration costs, bundle budgets.',
           ],
         },
         {
           heading: 'UX',
           items: [
-            'accessibility, RTL/Arabic support, i18n at scale, grid layout editing, org charts.',
+            'Accessibility, RTL/Arabic support, i18n at scale, grid layout editing, org charts.',
           ],
         },
       ],
@@ -101,6 +170,8 @@ const DICT = {
       about: 'Über mich',
       skills: 'Fähigkeiten',
       experience: 'Erfahrung',
+      education: 'Ausbildung',
+      certifications: 'Zertifikate',
       work: 'Kundenarbeit',
       contact: 'Kontakt',
     },
@@ -118,6 +189,14 @@ const DICT = {
     },
     skills: {
       title: 'Fähigkeiten',
+      categories: [
+        { heading: 'Frontend-Technologien', items: ['HTML', 'CSS', 'SCSS', 'JavaScript', 'TypeScript'] },
+        { heading: 'Frameworks & Bibliotheken', items: ['Vue.js (Vue 3 + Vite)', 'React.js', 'Angular', 'jQuery', 'UIkit', 'Bootstrap', 'Material Design Komponenten'] },
+        { heading: 'State & APIs', items: ['REST-API-Integration', 'Vuex/Pinia', 'Drittanbieter-Services'] },
+        { heading: 'Versionskontrolle', items: ['Git', 'GitHub', 'GitLab'] },
+        { heading: 'Weitere Fähigkeiten', items: ['Responsives Design', 'Cross-Browser-Kompatibilität', 'Debugging', 'Performance-Optimierung', 'UI/UX-Grundlagen'] },
+        { heading: 'Tools & Methodik', items: ['JIRA', 'Trello', 'Agile/Scrum'] },
+      ],
     },
     experience: {
       title: 'Erfahrung',
@@ -126,26 +205,67 @@ const DICT = {
           title: 'Frontend-Entwickler · Intalio',
           period: 'Jun 2022 – Heute',
           bullets: [
-            'Vue 3 + Vite Komponentenbibliothek aufgebaut und gepflegt (BaseInput, BaseModal, BaseDropdown, etc.).',
-            'Figma/Adobe XD in responsive, produktionsreife Komponenten umgesetzt (Vue/Angular/jQuery).',
-            'REST-APIs integriert und Datenfluss sowie UX in Enterprise-Dashboards optimiert.',
+            'Aufbau und Pflege einer Vue 3 + Vite Komponentenbibliothek (BaseInput, BaseModal, BaseDropdown, etc.) für Enterprise-Apps.',
+            'Figma/Adobe XD in responsive, produktionsreife Komponenten in Vue, Angular und jQuery umgesetzt.',
+            'Usability verbessert durch die Behebung gemeldeter Kundenprobleme und Optimierung von Workflows.',
+            'REST-APIs integriert und den Datenfluss zwischen Backend und Frontend optimiert.',
+            'Enge Zusammenarbeit mit Design, Backend und Stakeholdern zur Abstimmung auf Geschäftsziele.',
           ],
         },
         {
           title: 'Frontend-Entwickler · Bridgyfy',
           period: 'Mai 2021 – Mai 2022',
           bullets: [
-            'Sketch-Designs in pixelgenaue Seiten umgesetzt (HTML/CSS/JS).',
-            'Wiederverwendbare React-Komponenten gebaut und Usability bestehender Seiten verbessert.',
+            'Design-Dateien (Sketch) in pixelgenaue, responsive Seiten mit HTML, CSS und JavaScript umgesetzt.',
+            'Wiederverwendbare React-Komponenten entwickelt, um den Entwicklungsprozess zu beschleunigen.',
+            'UIkit und Material Design integriert, um das visuelle Erscheinungsbild zu verbessern.',
+            'Hochwertige Webseiten geliefert – mit Fokus auf Funktionalität und Nutzerbindung.',
           ],
         },
         {
-          title: 'Frontend-Entwickler · Freiberuflich',
-          period: 'Okt 2021 – Mai 2022 / Nov 2018 – Apr 2021',
+          title: 'Freelance Frontend-Entwickler · Fiverr',
+          period: 'Okt 2021 – Mai 2022',
           bullets: [
-            '15+ Kundenprojekte mit Fokus auf Responsiveness und UX geliefert.',
-            'Bestehende Websites für Performance und Engagement optimiert.',
+            'Adobe XD und Figma Designs in responsive Webseiten umgesetzt.',
+            'Client-Issues in bestehenden Seiten behoben und die Nutzbarkeit um 20% verbessert.',
+            'Aktive Kommunikation mit Kunden zur Abstimmung auf Geschäftsziele.',
           ],
+        },
+        {
+          title: 'Freelance Frontend-Entwickler',
+          period: 'Nov 2018 – Apr 2021',
+          bullets: [
+            '15+ Kundenprojekte geliefert mit Fokus auf responsives Webdesign und reibungslose Funktionalität.',
+            'Kontinuierlicher technischer Support zur Sicherstellung der Kundenzufriedenheit.',
+            'Bestehende Websites für bessere Performance und User Engagement optimiert.',
+          ],
+        },
+      ],
+    },
+    education: {
+      title: 'Ausbildung',
+      entries: [
+        {
+          qualification: 'Techniker für IT-Support & Netzwerke (unvollständig)',
+          institution: 'OFPPT – Amt für Berufsausbildung und Arbeitsförderung',
+          period: 'Sep 2018 – Jul 2020',
+          notes: '2 Jahre Studium, Kurse abgeschlossen, Diplom nicht erhalten',
+        },
+      ],
+    },
+    certifications: {
+      title: 'Zertifikate',
+      download: 'Herunterladen',
+      entries: [
+        {
+          name: 'Front-End Web Development Certificate – ALX',
+          date: 'Okt 2024',
+          image: '/assets/certificates/alx_frontend_certificate.jpg',
+          file: '/assets/certificates/alx_frontend_certificate.jpg',
+        },
+        {
+          name: 'Professional Foundations Certificate – ALX',
+          date: 'Aug 2024',
         },
       ],
     },
@@ -192,21 +312,10 @@ const DATA = {
   name: 'Mohamed El Masnaoui',
   role: 'Frontend Developer',
   location: 'Marrakech, Morocco',
-  skills: [
-    'Vue 3 + Vite',
-    'Angular',
-    'React',
-    'TypeScript',
-    'Pinia/Vuex',
-    'REST APIs',
-    'Responsive Design',
-    'Performance Optimization',
-    'Git',
-  ],
   cv: '/assets/Mohamed_El_Masnaoui_CV.pdf',
   email: 'elmasnaouimohamed97@gmail.com',
-  phone: '', // update to show
-  whatsapp: '', // update to show
+  phone: '+212651771053',
+  whatsapp: '+212651771053',
   linkedin: 'https://linkedin.com/in/el-masnaoui-med',
   fiverr: 'https://rb.gy/48fwgp',
   portfolio: 'https://mo-elmasnaoui.netlify.app',
