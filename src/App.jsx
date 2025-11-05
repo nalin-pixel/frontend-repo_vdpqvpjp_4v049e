@@ -319,6 +319,8 @@ const DATA = {
   linkedin: 'https://linkedin.com/in/el-masnaoui-med',
   fiverr: 'https://rb.gy/48fwgp',
   portfolio: 'https://mo-elmasnaoui.netlify.app',
+  // Hero image used for the banner (can be replaced with the exact first image you want)
+  heroImage: 'https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?q=80&w=2070&auto=format&fit=crop',
 };
 
 export default function App() {

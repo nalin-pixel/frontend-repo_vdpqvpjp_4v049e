@@ -1,24 +1,27 @@
 import { useState } from 'react';
-import Spline from '@splinetool/react-spline';
 
 export default function Hero({ t, data }) {
   const [loading, setLoading] = useState(true);
+  const imgSrc = data.heroImage ||
+    'https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?q=80&w=2070&auto=format&fit=crop';
 
   return (
     <section id="top" className="relative">
       <div className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] overflow-hidden">
-        {/* Interactive 3D background (Spline) */}
+        {/* Background hero image */}
         <div className="absolute inset-0">
-          <Spline
-            scene="https://prod.spline.design/ESO6PnMadasO0hU3/scene.splinecode"
+          {/* eslint-disable-next-line jsx-a11y/alt-text */}
+          <img
+            src={imgSrc}
+            alt={`${data.name} hero background`}
             onLoad={() => setLoading(false)}
-            style={{ width: '100%', height: '100%' }}
+            className="h-full w-full object-cover"
           />
         </div>
 
-        {/* Lightweight loader overlay until scene fully loads */}
+        {/* Loader overlay until image fully loads */}
         {loading && (
-          <div className="absolute inset-0 grid place-items-center bg-neutral-950/50">
+          <div className="absolute inset-0 grid place-items-center bg-neutral-950/60">
             <div className="flex items-center gap-3 rounded-md border border-neutral-800 bg-neutral-900/80 px-4 py-2">
               <span className="h-4 w-4 animate-spin rounded-full border-2 border-neutral-400 border-t-transparent" />
               <span className="text-xs text-neutral-300">Loading…</span>
@@ -36,7 +39,7 @@ export default function Hero({ t, data }) {
               <span className="text-neutral-300">{t('hero.greeting')}</span>{' '}
               <span className="text-white">{data.name}</span>
             </h1>
-            <p className="mt-3 text-neutral-300 text-sm sm:text-base">
+            <p className="mt-3 text-neutral-200 text-sm sm:text-base">
               {t('hero.role')} · {t('hero.location') || data.location}
             </p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
