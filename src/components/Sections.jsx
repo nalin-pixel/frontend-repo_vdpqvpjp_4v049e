@@ -10,8 +10,8 @@ export default function Sections({ t }) {
     <div className="mx-auto max-w-6xl px-4">
       {/* About */}
       <section id="about" className="py-12 sm:py-16 border-b border-neutral-900">
-        <h2 className="text-xl sm:text-2xl font-semibold text-white">{t('about.title')}</h2>
-        <div className="mt-4 max-w-3xl text-neutral-300 leading-relaxed whitespace-pre-line">
+        <h2 className="text-xl sm:text-2xl font-semibold text-white text-center">{t('about.title')}</h2>
+        <div className="mt-4 max-w-3xl mx-auto text-neutral-300 leading-relaxed whitespace-pre-line text-center">
           {aboutText}
         </div>
       </section>
@@ -103,8 +103,8 @@ export default function Sections({ t }) {
 
       {/* Client Work & NDA */}
       <section id="work" className="py-12 sm:py-16">
-        <h2 className="text-xl sm:text-2xl font-semibold text-white">{t('work.title')}</h2>
-        <p className="mt-4 max-w-3xl text-neutral-300 leading-relaxed">{t('work.body')}</p>
+        <h2 className="text-xl sm:text-2xl font-semibold text-white text-center">{t('work.title')}</h2>
+        <p className="mt-4 max-w-3xl mx-auto text-neutral-300 leading-relaxed text-center">{t('work.body')}</p>
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
           {workSections.map((ws, idx) => (
             <div key={idx} className="rounded-lg border border-neutral-900 bg-neutral-950/60 p-4">
